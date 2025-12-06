@@ -1,0 +1,143 @@
+@font-face {
+  font-family: 'Eyesome Regular';
+  src: url('/src/assets/Eyesome-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Eyesome Italic';
+  src: url('/src/assets/Eyesome-Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Eyesome Script';
+  src: url('/src/assets/Eyesome-Script.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  color: silver;
+  text-align: center;
+}
+
+input, select, button {
+  font-size: 1rem;
+  padding: 0.5em;
+  margin: 0.3em 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75); /* leicht abdunkeln */
+  z-index: -2;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: transparent;
+  overflow-x: hidden;
+}
+
+.headline-image {
+  width: 100%;
+  max-width: 450px;
+  margin: 20px auto 40px;
+  display: block;
+  border-radius: 20px; /* optional: elegante Abrundung */
+}
+
+html {
+  overflow-y: auto;
+}
+
+body {
+
+  background-image: url('/src/assets/Hochzeitshintergrund.png');
+  background-size: cover;        /* Skaliert für ALLE Bildschirmgrößen */
+  background-position: center bottom;   /* Zentriert das Bild */
+  background-repeat: no-repeat;  /* Kein Mosaik-Effekt */
+  background-attachment: fixed;  /* Parallax-Style, fixiert beim Scrollen */
+  min-height: 100vh;
+}
+
+@media (max-width: 600px) {
+  body {
+    background-attachment: scroll; /* Kein weird iOS-Springen */
+    background-position: center bottom;
+  }
+}
+
+/* Überschriften */
+h1, h2 {
+  font-family: 'Eyesome Script', cursive;
+  color: #d8d8d8; /* etwas heller als c0c0c0 = wirkt mehr wie echtes Silber */
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.6),   /* weicher outer glow */
+    0 0 18px rgba(255, 255, 255, 0.5),  /* zweiter leichter Schein */
+    0 0 3px rgba(0, 0, 0, 0.9);         /* dunkler Core für Kontrast */
+  letter-spacing: 1px;                  /* wirkt edler */
+  text-align: center;
+  margin: 1rem 0;
+}
+
+h1 {
+  font-size: 6rem; /* größer */
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.6),   /* weicher outer glow */
+    0 0 18px rgba(255, 255, 255, 0.5),  /* zweiter leichter Schein */
+    0 0 5px rgba(0, 0, 0, 0.9);         /* dunkler Core für Kontrast */
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+.map-container {
+  max-width: 500px;         /* passend zur Gesamtbreite */
+  margin: 2rem auto;        /* zentriert und mit Abstand oben/unten */
+  padding: 1rem;            /* Innenabstand für "Luft" */
+  border: 2px solid silver; /* eleganter silberner Rahmen */
+  border-radius: 12px;      /* abgerundete Ecken */
+  box-shadow: 0 4px 15px rgba(192,192,192,0.3); /* leichter Schatten für Tiefe */
+  background: rgba(6, 9, 24, 0.8); /* halbtransparenter dunkler Hintergrund */
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 10px;
+}
+
+.countdown {
+  font-size: 2rem;
+  margin: 1rem 0;
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #d0d0d0 30%,
+    #f5f5f5 50%,
+    #bfbfbf 70%,
+    #ffffff 100%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.6),
+    0 0 8px rgba(255, 255, 255, 0.4);
+}

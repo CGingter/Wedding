@@ -1,9 +1,34 @@
+import './App.css';
+import Countdown from './components/Countdown';
+import LocationMap from './components/LocationMap';
+import MouseTextTrail from './MouseTextTrail';
+import Dresscode from './components/Dresscode';
+import Ablauf from './components/Zeitlicher Ablauf';
+import Essen from './components/Essen';
+import Starfield from './components/Starfield';
+
 export default function App() {
   return (
-    <div style={{ minHeight: '100vh', display: 'grid', placeItems: 'center', background: '#f5f5f5' }}>
-      <h1 style={{ fontSize: '2rem', color: '#cc3366' }}>
-        Hallo Hochzeit! 🎉
-      </h1>
+    <div className="container">
+      <MouseTextTrail />
+      <h1>Wir sagen ja!</h1>
+      <Starfield />
+      <div className='countdown'>
+      <Countdown />
+      <p>Am 18. September 2026</p>
+      </div>
+      <div className="map-container">
+        <Ablauf />
+      </div>
+      <div className="map-container">
+        <LocationMap />
+      </div>
+      <div className="map-container">
+        <Essen />
+      </div>
+      <div className="map-container">
+        <Dresscode />
+      </div>
     </div>
   );
 }
