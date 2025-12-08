@@ -1,3 +1,5 @@
+import sonni from '../assets/sonnikleid.jpg';
+
 export default function Dresscode() {
     return (
         <div style={{ margin: '1em 0' }}>
@@ -7,7 +9,7 @@ export default function Dresscode() {
                 Ihr dürft sogar in weiß kommen, wenn ihr möchtet :)
             </p>
             <img
-        src={'/src/assets/sonnikleid.jpg'}
+        src={sonni}
         alt="Brautpaar"
         className="headline-image"
       />
