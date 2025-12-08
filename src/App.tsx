@@ -6,6 +6,7 @@ import Dresscode from './components/Dresscode';
 import Ablauf from './components/Zeitlicher Ablauf';
 import Essen from './components/Essen';
 import Starfield from './components/Starfield';
+import sonnichrissy from '../assets/sonnichrissy.jpg';
 
 export default function App() {
   return (
@@ -13,6 +14,11 @@ export default function App() {
       <MouseTextTrail />
       <h1>Wir sagen ja!</h1>
       <Starfield />
+            <img
+        src={sonnichrissy}
+        alt="Brautpaar"
+        className="headline-image"
+      />
       <div className='countdown'>
       <Countdown />
       <p>Am 18. September 2026</p>
